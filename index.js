@@ -17,14 +17,12 @@ function jsonifyString(str, delim = '.') {
             o1[o1Keys[0]] = o2;
         }
     };
-    return JSON.stringify(
-        strArr.map((v, i) => {
-            return { [v]: null }
-        }).reduce((o1, o2) => {
-            mapToObject(o1, o2);
-            return o1;
-        })
-    );
+    return strArr.map((v, i) => {
+        return { [v]: null }
+    }).reduce((o1, o2) => {
+        mapToObject(o1, o2);
+        return o1;
+    });
     */
 
     // a much simpler approach
